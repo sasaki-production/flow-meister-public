@@ -1,0 +1,48 @@
+.hamburger {
+  position: relative;
+  display: inline-block;
+  width: 25px;
+  height: 21px;
+  vertical-align: top;
+  cursor: pointer;
+  background: transparent;
+  border: none;
+  box-shadow: none;
+}
+
+.bar1,
+.bar2,
+.bar3 {
+  position: absolute;
+  inset: 0;
+  width: 25px;
+  height: 3px;
+  margin: auto;
+  background: var(--blue-500);
+  border-radius: 13px;
+  transition: rotate 0.3s, translate 0.3s;
+}
+
+.bar1 {
+  translate: 0 -9px;
+
+  .isOpen & {
+    rotate: 45deg;
+    translate: 0;
+  }
+}
+
+.bar2 {
+  .isOpen & {
+    opacity: 0;
+  }
+}
+
+.bar3 {
+  translate: 0 9px;
+
+  .isOpen & {
+    rotate: -45deg;
+    translate: 0;
+  }
+}

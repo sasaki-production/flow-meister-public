@@ -1,0 +1,151 @@
+.card {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 12px;
+  align-items: center;
+  padding-block: 16px;
+
+  @media (width >= 768px) {
+    grid-template-columns: calc(330 / 1024 * 100%) minmax(0, 1fr);
+    gap: 32px;
+    padding-block: 24px;
+  }
+}
+
+.image {
+  width: 100%;
+  overflow: hidden;
+  transition: opacity 0.3s;
+
+  @media (any-hover: hover) {
+    &:hover {
+      opacity: 0.6;
+    }
+  }
+}
+
+.thumbnail {
+  display: block;
+  width: 100%;
+  aspect-ratio: 358 / 239;
+  object-fit: cover;
+  border-radius: 4px;
+
+  @media (width >= 768px) {
+    aspect-ratio: 330 / 220;
+    border-radius: 8px;
+  }
+}
+
+.body {
+  display: grid;
+  grid-template-areas:
+    'date'
+    'title'
+    'categories';
+  grid-template-columns: minmax(0, 1fr);
+  gap: 8px;
+  align-items: start;
+
+  @media (width >= 768px) {
+    grid-template-areas:
+      'title title'
+      'excerpt excerpt'
+      'date categories';
+    grid-template-columns: auto minmax(0, 1fr);
+    gap: 12px;
+  }
+}
+
+.title {
+  display: -webkit-box;
+  grid-area: title;
+  align-self: stretch;
+  overflow: hidden;
+  font-size: 14px;
+  font-weight: 800;
+  line-height: normal;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 2;
+  transition: color 0.3s;
+  -webkit-box-orient: vertical;
+
+  @media (any-hover: hover) {
+    &:hover {
+      color: var(--slate-400);
+    }
+  }
+
+  @media (width >= 768px) {
+    font-size: 20px;
+  }
+}
+
+.excerpt {
+  display: none;
+  grid-area: excerpt;
+
+  @media (width >= 768px) {
+    display: -webkit-box;
+    align-self: stretch;
+    overflow: hidden;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.8;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+  }
+}
+
+.date {
+  grid-area: date;
+  font-family: var(--font-montserrat);
+  font-size: 11px;
+  font-weight: 700;
+  line-height: 1.8;
+  color: var(--slate-400);
+
+  @media (width >= 768px) {
+    font-size: 14px;
+  }
+}
+
+.categories {
+  display: flex;
+  flex: 1 0 0;
+  flex-wrap: wrap;
+  grid-area: categories;
+  gap: 8px;
+  align-content: flex-start;
+  align-items: flex-start;
+
+  @media (width >= 768px) {
+    gap: 12px;
+  }
+}
+
+.category {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2px 8px;
+  font-family: var(--font-montserrat);
+  font-size: 10px;
+  font-weight: 800;
+  line-height: 1.8;
+  color: #6b7280;
+  background: var(--sky-100);
+  transition: background-color 0.3s;
+
+  @media (any-hover: hover) {
+    &:hover {
+      background-color: var(--sky-200);
+    }
+  }
+
+  @media (width >= 768px) {
+    padding: 2px 20px;
+    font-size: 12px;
+  }
+}

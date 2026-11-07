@@ -1,0 +1,40 @@
+.submit {
+  display: inline-grid;
+  grid-template-columns: auto auto;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 40px;
+  font-family: var(--font-m-plus-1p);
+  font-size: 16px;
+  font-weight: 800;
+  line-height: 1.5;
+  color: var(--white);
+  letter-spacing: 0.05em;
+  cursor: pointer;
+  background: var(--blue-500);
+  border: 2px solid var(--blue-500);
+  border-radius: 48px;
+  transition: background-color 0.3s, color 0.3s;
+
+  @media (any-hover: hover) {
+    &:hover {
+      color: var(--blue-500);
+      background-color: var(--white);
+    }
+  }
+
+  @media (width >= 768px) {
+    padding-inline: 80px;
+    font-size: 20px;
+  }
+}
+
+.icon {
+  width: 18px;
+}
+
+.icon path {
+  fill: currentcolor;
+  transition: fill 0.3s;
+}

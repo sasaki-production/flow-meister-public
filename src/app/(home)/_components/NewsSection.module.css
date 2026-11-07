@@ -1,0 +1,53 @@
+.news {
+  position: relative;
+  padding-block: 60px;
+  background: var(--sky-50);
+
+  &::before {
+    position: absolute;
+    bottom: calc(100% - 1px); /* サブピクセルレンダリング対策 */
+    left: 0;
+    width: 100%;
+    height: 20px;
+    content: '';
+    background: url('/news-section-wave-sp.svg') no-repeat center / 100% 100%;
+  }
+
+  @media (width >= 768px) {
+    padding-block: 80px;
+
+    &::before {
+      height: 72px;
+      background-image: url('/news-section-wave-pc.svg');
+    }
+  }
+}
+
+.container {
+  display: grid;
+  gap: 20px;
+  width: calc(1024px + 20px * 2);
+  max-width: 100%;
+  padding-inline: 16px;
+  margin-inline: auto;
+
+  @media (width >= 768px) {
+    gap: 36px;
+    padding-inline: 20px;
+  }
+}
+
+.textNotFound {
+  text-align: center;
+}
+
+.cards {
+}
+
+.card {
+  border-bottom: 2px solid var(--ray-200);
+}
+
+.button {
+  text-align: center;
+}

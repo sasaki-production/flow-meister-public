@@ -1,0 +1,87 @@
+.point {
+  position: relative;
+  padding-block: 40px 29px;
+  background: var(--white);
+
+  &::before {
+    position: absolute;
+    bottom: calc(100% - 1px); /* サブピクセルレンダリング対策 */
+    left: 0;
+    width: 100%;
+    height: 25px;
+    content: '';
+    background: url('/point-section-wave-sp.svg') no-repeat center /
+      100% 100%;
+  }
+
+  @media (width >= 768px) {
+    padding-block: 80px 145px;
+
+    &::before {
+      height: 85px;
+      background-image: url('/point-section-wave-pc.svg');
+    }
+  }
+}
+
+.container {
+  width: calc(1176px + 20px * 2);
+  max-width: 100%;
+  padding-inline: 26px;
+  margin-inline: auto;
+
+  @media (width >= 768px) {
+    padding-inline: 20px;
+  }
+}
+
+.lead {
+  font-size: 20px;
+  font-weight: 800;
+  line-height: 1.5;
+  color: var(--slate-700);
+  text-align: center;
+
+  .em {
+    color: var(--blue-500);
+  }
+
+  @media (width >= 768px) {
+    font-size: 32px;
+
+    .spOnly {
+      display: none;
+    }
+  }
+}
+
+.cards {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  margin-top: 16px;
+
+  @media (width >= 768px) {
+    flex-direction: row;
+    margin-top: 40px;
+  }
+}
+
+.card {
+  flex: 1;
+  flex-direction: column;
+
+  &:nth-child(n + 2) {
+    border-top: 3px solid #f1f5f9;
+    border-left: none;
+  }
+
+  @media (width >= 768px) {
+    flex-direction: row;
+
+    &:nth-child(n + 2) {
+      border-top: none;
+      border-left: 3px solid #f1f5f9;
+    }
+  }
+}

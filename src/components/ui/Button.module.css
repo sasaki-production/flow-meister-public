@@ -1,0 +1,38 @@
+.button {
+  display: inline-flex;
+  column-gap: 20px;
+  align-items: center;
+  justify-content: center;
+  padding: calc(20px - 2px) calc(40px - 2px);
+  font-weight: 800;
+  line-height: 1.5; /* 24px */
+  color: var(--white);
+  letter-spacing: calc((0.8 / 16) * 1em);
+  background: var(--blue-500);
+  border: 2px solid var(--blue-500);
+  border-radius: 50vmax;
+  transition: color 0.3s, background 0.3s, border 0.3s;
+
+  @media (width >= 768px) {
+    padding-inline: calc(80px - 2px);
+    font-size: 20px;
+  }
+}
+
+@media (any-hover: hover) {
+  .button:hover {
+    color: var(--blue-500);
+    background: var(--white);
+    border: 2px solid var(--blue-500);
+    
+  }
+
+  .icon {
+    width: 18px;
+    height: auto;
+  }
+
+  .button:hover .icon path {
+    fill: var(--blue-500);
+  }
+}

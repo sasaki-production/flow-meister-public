@@ -1,0 +1,107 @@
+.footer {
+  padding: 10px 20px 20px;
+  background: var(--White);
+}
+
+.container {
+}
+
+.main {
+  display: flex;
+  flex-flow: column wrap;
+  gap: 40px;
+  justify-content: space-between;
+  padding: 40px 20px;
+  border-top: 2px solid var(--Sky-100);
+
+  @media (width >= 768px) {
+    flex-direction: row;
+    padding: 40px 80px;
+  }
+}
+
+.info {
+}
+
+.logoLink {
+  transition: opacity 0.3s;
+
+  @media (any-hover: hover) {
+    &:hover {
+      opacity: 0.6;
+    }
+  }
+}
+
+.logo {
+  display: block;
+  width: 198px;
+
+  @media (width >= 768px) {
+    width: 228px;
+  }
+}
+
+.company,
+.address {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.8;
+  color: var(--Slate-700);
+}
+
+.company {
+  margin-top: 32px;
+
+  @media (width >= 768px) {
+    margin-top: 40px;
+  }
+}
+
+.nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px 56px;
+
+  @media (width >= 768px) {
+    gap: 48px;
+  }
+}
+
+.lists1,
+.lists2,
+.lists3 {
+  display: grid;
+  gap: 16px;
+  align-content: start; /* 上に寄せる */
+}
+
+.list {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.8;
+  color: var(--Slate-700);
+
+  @media (width >= 768px) {
+    font-size: 18px;
+  }
+}
+
+.link {
+  transition: color 0.3s;
+
+  @media (any-hover: hover) {
+    &:hover {
+      color: var(--Blue-500);
+    }
+  }
+}
+
+.copyright {
+  font-family: var(--font-montserrat);
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 1.8;
+  color: var(--Slate-700);
+  text-align: center;
+}

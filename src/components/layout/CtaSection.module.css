@@ -1,0 +1,53 @@
+.cta {
+  padding: 20px 20px 10px;
+  background: var(--White);
+}
+
+.content {
+  padding: 36px 24px;
+  background: var(--Sky-200) url('/cta-bg-sp.png') no-repeat center center /
+    cover;
+  border-radius: 16px;
+
+  @media (width >= 768px) {
+    padding: 48px 40px;
+    background: url('/cta-bg-pc.png') no-repeat center center / cover;
+  }
+}
+
+.description {
+  width: fit-content;
+  margin-inline: auto;
+  margin-top: 36px;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.8;
+  text-align: left;
+
+  @media (width >= 768px) {
+    text-align: center;
+  }
+}
+
+.buttons {
+  display: flex;
+  flex-flow: column wrap;
+  gap: 36px;
+  align-items: center;
+  justify-content: center;
+  margin-top: 40px;
+
+  @media (width >= 768px) {
+    flex-direction: row;
+  }
+}
+
+.button {
+  display: grid;
+  width: 100%;
+
+  @media (width >= 768px) {
+    display: inline-block;
+    width: auto;
+  }
+}

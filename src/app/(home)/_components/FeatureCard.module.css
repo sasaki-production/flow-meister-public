@@ -1,0 +1,79 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: stretch;
+
+  @media (width >= 768px) {
+    flex-direction: row;
+    gap: 30px;
+
+    &.isReverse {
+      flex-direction: row-reverse;
+    }
+  }
+}
+
+.box {
+  padding: 24px;
+  background: var(--white);
+  border-radius: 20px;
+  box-shadow: 0 5px 15px -3px rgb(96 165 250 / 15%),
+    0 -5px 6px -4px rgb(96 165 250 / 10%);
+
+  @media (width >= 768px) {
+    padding: 32px;
+  }
+}
+
+.point {
+  font-family: var(--font-montserrat);
+  font-size: 28px;
+  font-weight: 700;
+  line-height: normal;
+  color: var(--blue-500);
+
+  @media (width >= 768px) {
+    font-size: 36px;
+  }
+}
+
+.heading {
+  margin-top: 8px;
+  font-size: 20px;
+  font-weight: 800;
+  line-height: 1.5;
+  color: var(--slate-700);
+  letter-spacing: 0.05em;
+
+  @media (width >= 768px) {
+    font-size: 24px;
+  }
+}
+
+.text {
+  margin-top: 8px;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.8;
+  color: var(--slate-700);
+
+  @media (width >= 768px) {
+    margin-top: 24px;
+    font-size: 18px;
+  }
+}
+
+.imageBox {
+  flex-shrink: 0;
+
+  @media (width >= 768px) {
+    flex-basis: calc(456 / 1240 * 100%);
+  }
+}
+
+.image {
+  display: block;
+  width: 100%;
+  border-radius: 20px;
+}
